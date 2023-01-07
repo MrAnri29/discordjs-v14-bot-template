@@ -1,0 +1,32 @@
+{
+    "name": "discordjs-v14-bot-template",
+    "version": "1.0.0",
+    "description": "A simple template for your v14 discord bot that supports slashCommands and prefixCommands",
+    "main": "index.js",
+    "scripts": {
+        "test": "nodemon index.js",
+        "start": "node index.js"
+    },
+    "keywords": [
+        "discordjs",
+        "discord.js",
+        "discordjsv14",
+        "discord.jsv14",
+        "discord-bot",
+        "discord",
+        "bot",
+        "template",
+        "discordjsv14handler",
+        "handler",
+        "discord-bot-handler"
+    ],
+    "author": "Anrius#0069",
+    "license": "ISC",
+    "dependencies": {
+        "discord.js": "^14.7.1"
+    },
+    "devDependencies": {
+        "dotenv": "^16.0.3",
+        "nodemon": "^2.0.20"
+    }
+}

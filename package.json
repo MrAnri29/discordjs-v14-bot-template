@@ -23,6 +23,8 @@
     "author": "Anrius#0069",
     "license": "ISC",
     "dependencies": {
+        "ascii-table": "^0.0.9",
+        "colors": "^1.4.0",
         "discord.js": "^14.7.1"
     },
     "devDependencies": {

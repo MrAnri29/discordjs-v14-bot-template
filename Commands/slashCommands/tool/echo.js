@@ -6,23 +6,17 @@ const {
 } = require("discord.js");
 
 module.exports = {
-    help: {
-        name: "echo",
-        description: "იმეორებს მოცემულ ტექსტს",
-        utilization: "echo [text]",
-        example: "echo hi sisters :wave:",
-    },
     data: new SlashCommandBuilder()
         .setName("echo")
-        .setDescription("იმეორებს მოცემულ ტექსტს")
+        .setDescription("repeats your message")
         .setDefaultMemberPermissions(
             PermissionFlagsBits.SendMessages,
             PermissionFlagsBits.MentionEveryone
         )
         .addStringOption((option) =>
             option
-                .setName("text")
-                .setDescription("ტექსტი რომელსაც გაიმეორებს ბოტი")
+                .setName("message")
+                .setDescription("message that will be repeated")
                 .setRequired(true)
                 .setMaxLength(2000)
         ),
@@ -32,9 +26,9 @@ module.exports = {
      * @param {Client} client
      */
     async execute(_, interaction) {
-        const text = interaction.options.getString("text");
+        const message = interaction.options.getString("message");
         return interaction.reply({
-            content: text,
+            content: message,
             ephemeral: false,
         });
     },

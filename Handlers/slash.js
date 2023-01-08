@@ -22,7 +22,9 @@ function slashHandler(client) {
             continue;
         }
     })
-    client.application.commands.set(slashCommandsArray);
+    client.application.commands
+        .set(slashCommandsArray)
+        .then(() => console.log("Slash commands • Registered".cyan));
     return console.log(table.toString().brightCyan);
 }
 

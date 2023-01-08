@@ -8,7 +8,6 @@ module.exports = {
     execute(interaction, client) {
         if (!interaction.type == 2) return;
         const slashCommand = client.slashCommands.get(interaction.commandName);
-        console.log(interaction.commandName);
         if (!slashCommand) {
             client.slashCommands.delete(interaction.commandName);
             return interaction.reply({

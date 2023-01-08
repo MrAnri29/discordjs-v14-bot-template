@@ -8,7 +8,7 @@ const {
 module.exports = {
     data: new SlashCommandBuilder()
         .setName("ping")
-        .setDescription("ტესტ ბრძანება")
+        .setDescription("replies with pong!")
         .setDefaultMemberPermissions(PermissionFlagsBits.SendMessages),
     /**
      * @param {CommandInteraction} interaction
